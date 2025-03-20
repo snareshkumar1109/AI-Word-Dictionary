@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "AI Word Dictionary",
+  "version": "1.0",
+  "description": "A dictionary extension to define words on webpages.",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["saved_words.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

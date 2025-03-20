@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Words - AI Dictionary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="saved_words.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Saved Words</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search saved words...">
+                <button id="clearSearch">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div id="emptyState" class="empty-state">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <p>You haven't saved any words yet.</p>
+                <p>Right-click on any word while browsing and select "Define this word" to get started.</p>
+            </div>
+
+            <ul id="wordList" class="word-list">
+                <!-- Words will be populated here -->
+            </ul>
+        </main>
+
+        <footer>
+            <button id="exportBtn" class="btn-export">Export Words</button>
+            <button id="clearAllBtn" class="btn-clear-all">Clear All</button>
+        </footer>
+    </div>
+
+    <script src="saved_words.js"></script>
+</body>
+</html>
+
